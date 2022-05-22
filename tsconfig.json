@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outFile": "./script/JS/bandle.js",
+    "removeComments": true,
+    "watch": true,
+    "target": "ESNext"
+  }
+}

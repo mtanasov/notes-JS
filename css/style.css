@@ -1,0 +1,79 @@
+html,
+body {
+   /* scroll-behavior: smooth; */
+   height: 96%;
+   overflow: hidden;
+}
+
+body {
+   /* overflow: visible; */
+   --bgrColorNote: #f9f9d5;
+   --borderColorGr: #c6d3db;
+   --widthCrNote: 420px;
+   --heightCrNote: 400px;
+   --whiteColor: #fefefe;
+   --ligthGreenColor: rgb(135 202 135);
+   /* --badScript: "Bad_Script"; */
+   --badScript: "Releway";
+   --icons: "Pe-icon";
+   --mainFont: "Comfortaa";
+   --hDateCreatedNote: -35px;
+}
+
+#main {
+   height: 100%;
+   /* margin-bottom: 5px; */
+}
+
+#footer {
+   display: inline-block;
+   position: absolute;
+   background-color: var(--ligthGreenColor);
+   font-family: var(--mainFont);
+   font-size: 11px;
+   text-align: center;
+   padding: 10px 0;
+   bottom: 0;
+   width: 100%;
+}
+
+
+* ::placeholder {
+   font-size: 12px;
+   font-family: var(--mainFont);
+
+}
+
+#pro {
+   width: 320px;
+   height: 30px;
+   border-radius: 25px;
+}
+
+* {
+   cursor: url(../img/cursor.png), pointer;
+}
+
+
+::-webkit-scrollbar:hover {
+   width: 15px;
+}
+
+::-webkit-scrollbar {
+   width: 6px;
+   background-color: var(--bgrColorNote);
+}
+
+::-webkit-scrollbar-track {
+   background-color: var(--bgrColorNote);
+   /* border: 1px red solid; */
+}
+
+::-webkit-scrollbar-thumb {
+   width: 5px;
+   border: 1px grey solid;
+   /* border-radius: 50px; */
+   background-color: var(--borderColorGr);
+   /* var(--ligthGreenColor) */
+   ;
+}

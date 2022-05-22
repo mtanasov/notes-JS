@@ -1,0 +1,303 @@
+#content {
+   display: flex;
+   width: 100%;
+   height: 92%;
+   /* background-color: rgb(95 158 160); */
+   flex-direction: row;
+   justify-content: flex-start;
+   gap: 5px;
+   overflow-y: auto;
+   /* background: linear-gradient(-90deg, #ee7752ab, #e73c7e73, #23a6d58f, #23d5ab87); */
+   /* background-size: 200% 200%; */
+   /* animation: gradient 5s linear infinite; */
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+
+   50% {
+      background-position: 100% 50%;
+   }
+
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+#createNote {
+   display: flex;
+   position: relative;
+   height: var(--heightCrNote);
+   width: var(--widthCrNote);
+   background-color: var(--bgrColorNote);
+   margin: 0 0 0 5px;
+   border: 2px solid var(--borderColorGr);
+   border-top: none;
+   flex-direction: column;
+}
+
+#typeNote {
+   width: calc(100% - 50px);
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 6px;
+   color: #81817d;
+   margin: 5px 0 0 10px;
+   font-family: var(--badScript);
+   font-size: 12px;
+   letter-spacing: 0.5px;
+   font-weight: 700;
+}
+
+#today {
+   text-align: center;
+   display: inline-block;
+   font-family: var(--mainFont);
+   font-size: 12px;
+   /* color: #525d64; */
+   padding: 5px;
+   /* background-color: #e78181; */
+   border-bottom: 1px solid var(--borderColorGr);
+   user-select: none;
+}
+
+#time {
+   margin: 0 15px;
+}
+
+#timeH::after {
+   position: relative;
+   bottom: 1px;
+   content: ":";
+   margin-left: 3px;
+   vertical-align: top;
+   animation: 1s flashing linear infinite alternate;
+}
+
+#titleNote,
+#valueNote {
+   margin: 5px 8px 0 8px;
+   width: calc(var(--widthCrNote) - 74px);
+   background-color: var(--bgrColorNote);
+   font-family: var(--badScript);
+}
+
+#valueNote {
+   width: 294px;
+}
+
+#titleNote::placeholder {
+   font-size: 14px;
+}
+
+#titleNote {
+   height: 30px;
+   font-weight: 700;
+   font-size: 16px;
+}
+
+#valueNote::placeholder {
+   font-size: 12px;
+}
+
+#valueNote {
+   height: calc(var(--heightCrNote) - 70px);
+   font-size: 14px;
+   font-weight: 400;
+   resize: none;
+}
+
+#toolsNote>[title]:hover:after {
+   content: attr(title);
+   padding: 7px;
+   position: absolute;
+   font-family: var(--mainFont);
+   background-color: var(--bgrColorNote);
+   border: 1px solid var(--borderColorGr);
+   z-index: 25;
+   font-size: 11px;
+   /* pointer-events: auto !important; */
+   /* animation: 1s dispOn 0.5s linear forwards; */
+}
+
+#btnDateEvent:hover::after,
+.btnDE:hover::after,
+#btnTimeEvent:hover::after,
+.btnTE:hover::after,
+#btnLocation:hover::after,
+#btnClearNote:hover::after,
+#btnSaveNote:hover::after {
+   /* content: attr(); */
+   padding: 7px;
+   position: absolute;
+   color: black;
+   font-family: var(--mainFont);
+   background-color: var(--bgrColorNote);
+   left: 38px;
+   border: 1px solid var(--borderColorGr);
+   z-index: 25;
+   opacity: 0;
+   animation: 1s dispOn 0.5s linear forwards;
+   font-size: 11px;
+   font-weight: 200;
+   transition: 1s linear;
+   cursor: pointer;
+}
+
+.btnDE:hover::after {
+   content: "дата события";
+   top: -5px;
+}
+
+.btnTE:hover::after {
+   content: "время события";
+   top: 70px;
+}
+
+#btnLocation:hover::after {
+   content: "место события";
+   top: 144px;
+}
+
+#btnClearNote:hover::after {
+   content: "очистить поля ввода";
+   top: 210px;
+}
+
+#btnSaveNote:hover::after {
+   content: "сохранить заметку";
+   top: 300px;
+}
+
+#btnLocation {
+   cursor: pointer;
+}
+
+
+
+
+@keyframes dispOn {
+   0% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+#toolsNote {
+   display: flex;
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   width: 50px;
+   height: calc(var(--heightCrNote) - 2px);
+   background-color: var(--bgrColorNote);
+   padding: 5px;
+   font-family: var(--icons);
+   flex-direction: column;
+   align-items: center;
+   font-size: 30px;
+   justify-content: space-around;
+   border-left: 1px var(--borderColorGr) solid;
+   /* cursor: pointer; */
+}
+
+.btnDE {
+   /* position: absolute; */
+   /* top: 20%; */
+   cursor: pointer;
+   border: 1px solid transparent;
+   height: 28px;
+   width: 28px;
+   /* z-index: 5; */
+}
+
+
+#btnDateEvent {
+   display: inline-block;
+   position: relative;
+   top: -38px;
+   left: 5px;
+   width: 19px;
+   height: 25px;
+   opacity: 0;
+   /* cursor: pointer; */
+}
+
+#inputLocation {
+   display: none;
+   position: absolute;
+   top: 52%;
+   width: 200px;
+   height: 25px;
+   border: 1px solid var(--borderColorGr);
+   font-size: 14px;
+   background-color: var(--bgrColorNote);
+   font-family: var(--mainFont);
+   z-index: 5;
+}
+
+#btnClearNote,
+#btnSaveNote,
+#inputLocation {
+   cursor: pointer;
+}
+
+
+/* #btnDateEvent::after {
+   content: "fg";
+   width: 30px;
+}
+ */
+
+.btnTE {
+   /* position: absolute; */
+   /* top: 36%; */
+   height: 25px;
+   width: 25px;
+   cursor: pointer;
+}
+
+#btnTimeEvent {
+   width: 32px;
+   height: 28px;
+   opacity: 0;
+   position: relative;
+   top: -38px;
+   left: -8px;
+   cursor: pointer;
+}
+
+.label1 {
+   cursor: pointer;
+   transform: scaleX(-1);
+   font-weight: 700;
+}
+
+#listSavedNotes {
+   display: flex;
+   border: 2px solid var(--borderColorGr);
+   border-bottom: none;
+   border-top: none;
+   width: 100%;
+   flex-direction: column;
+   padding: 5px 0 5px 0;
+   gap: 5px;
+   font-family: var(--mainFont);
+   overflow-x: hidden;
+   /* overflow-y: auto; */
+   height: 100%;
+   /* background-color: black; */
+}
+
+
+@keyframes flashing {
+   100% {
+      opacity: 0;
+   }
+}

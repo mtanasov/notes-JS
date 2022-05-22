@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+	<!-- <style>
+		html,
+		body {
+			/* width: 100%;
+			height: 100%;
+			margin: 0;
+			background: url(./icon.gif);
+			background-size: 100%;
+			background-repeat: no-repeat; */
+			-webkit-app-region: drag;
+		}
+	</style> -->
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/nullList.css">
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/content.css">
+	<link rel="stylesheet" href="./css/createJS.css">
+	<link rel="stylesheet" href="./css/message.css">
+	<link rel='icon'
+		href='https://res.cloudinary.com/computer-know-how/images/w_1052,h_675,c_fill,g_auto/f_auto,q_auto/v1586880081/JavaScript-logo/JavaScript-logo-1052x675.png?_i=AA'>
+	<!-- <script src="console.js"></script> -->
+	<script type="module" src="./script/main.js"></script>
+	<script defer src="./script/JS/bandle.js"></script>
+	<!-- <script defer src="./script/main.js"></script> -->
+	<title> Заметки </title>
+
+</head>
+
+<body>
+	<div id="main">
+		<!-- шапка сайта -->
+		<div id="header">
+			<h1>Заметки</h1>
+			<span id="search">
+				для поиска в сохраненных заметках нажмите CTRL + F
+			</span>
+			<!-- <span id="searchBlock">
+				<input id="inpSearchTxt" type="text" placeholder="поиск...">
+				<span id="btnSearch">&#xe618</span> -->
+			<!-- <span id="btnFilter">&#xe655</span> -->
+			<!-- </span> -->
+			<span id="audio">&#xe612
+				<input id="sound" type="checkbox" checked>
+			</span>
+			<div id="systemBtn">
+				<div id="collapse">&#xe644</div>
+				<!-- <div id="fullSize">&#xe658</div> -->
+				<div id="transfer" title="двигать окно">&#xe657</div>
+				<div id="closeWin">&#xe681</div>
+			</div>
+		</div>
+		<div id="content">
+			<!-- создание заметки -->
+			<div id="createNote">
+				<span id="today">
+					<span id="todayDay"> четверг</span>
+					<span id="todayDate"> 14</span>
+					<span id="todayMonth">апреля</span>
+					<span id="todayYear">2022</span>
+					<span id="time">
+						<span id="timeH">22</span>
+						<span id="timeM">30</span>
+					</span>
+				</span>
+				<!-- <form id="typeNote">
+					<input id="list" name="type" type="radio" value="список" checked> текст
+					<input id="checkbox" name="type" type="radio" value="checkbox"> чеклист
+				</form> -->
+				<input maxlength="30" type="text" id="titleNote" placeholder="название">
+				<textarea maxlength="800" id="valueNote" placeholder="напишите детали события"></textarea>
+				<!-- настройки создаваемой заметки -->
+				<div id="toolsNote">
+					<!-- <input type="checkbox" title="зафиксировать в начале списка" id="btnFixetNote">
+					<label for="btnFixetNote" class="label1">&#xe69b</label> -->
+					<div class="btnDE">
+						&#xe660
+						<input text="дата события" type="date" id="btnDateEvent">
+					</div>
+
+					<!-- <label for="btnDateEvent">&#xe660</label> -->
+
+					<div class="btnTE">
+						&#xe66b
+						<input type="time" id="btnTimeEvent">
+					</div>
+
+					<div id="btnLocation">&#xe638</div>
+					<input maxlength="20" placeholder=" введите место события" type="text" id="inputLocation" autofocus>
+					<div id="btnClearNote">&#xe609</div>
+					<div id="btnSaveNote">&#xe65f</div>
+				</div>
+			</div>
+			<!-- список сохраненных заметок -->
+			<div id="listSavedNotes">
+				<!-- <div class="savedNote">
+					<span class="dataCreatedSavedNote"> дата создания: 31 февраля 2012</span>
+					<span class="fixedSavedNote">&#xe69b</span>
+					<span class="statusSavedNote">&#xe66c</span>
+					<span class="settingSavedNote">
+						<span class="dateSavedNote">
+							<span class="daySavedNote"> 10</span>
+							<span class="monthSavedNote">апреля</span>
+							<span class="yearSavedNote">2022</span>
+						</span>
+						<span class="timeSavedNote">
+							<span class="hSavedNote">09</span>
+							<span class="mSavedNote">45</span>
+						</span>
+						<span class="locationSavedNote"> ЖД вокзал Одесса</span>
+					</span>
+					<div class="titleSavedNote">Новый год</div>
+					<div class="textSavedNote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Suspendisse pretium
+						vehicula dolor, a
+						consequat turpis tristique maximus. Vivamus semper quam eu vulputate eleifend. Phasellus luctus
+						porttitor erat, sit amet gravida nulla. Proin condimentum leo eu mi sollicitudin cursus. Fusce lacinia
+						felis nec ante consequat aliquam. Proin ac velit feugiat, pharetra.
+					</div>
+				</div> -->
+				<!-- <div class="savedNote">
+					<span class="dataCreatedSavedNote"> дата создания: 31 февраля 2012</span>
+					<span class="fixedSavedNote">&#xe69b</span>
+					<span class="statusSavedNote">&#xe66c</span>
+					<span class="settingSavedNote">
+						<span class="dateSavedNote">
+							<span class="daySavedNote"> 10</span>
+							<span class="monthSavedNote">апреля</span>
+							<span class="yearSavedNote">2022</span>
+						</span>
+						<span class="timeSavedNote">
+							<span class="hSavedNote">09</span>
+							<span class="mSavedNote">45</span>
+						</span>
+						<span class="locationSavedNote"> ЖД вокзал Одесса</span>
+					</span>
+					<div class="titleSavedNote">Новый год</div>
+					<div class="textSavedNote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium
+						vehicula dolor, a
+						consequat turpis tristique maximus. Vivamus semper quam eu vulputate eleifend. Phasellus luctus
+						porttitor erat, sit amet gravida nulla. Proin condimentum leo eu mi sollicitudin cursus. Fusce lacinia
+						felis nec ante consequat aliquam. Proin ac velit feugiat, pharetra.
+					</div>
+				</div> -->
+			</div>
+
+		</div>
+		<div id="footer"> итоговая работа по javascript </div>
+	</div>
+
+</body>
+
+</html>
+
+<!-- {
+  "name": "18042022-nj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./script/main.js",
+  "type": "module",
+  "scripts": {
+    "tanasov": "tsc",
+    "electro": "electron index.js" -->

@@ -1,0 +1,25 @@
+#messConfirm {
+   display: inline-block;
+   position: absolute;
+   /* top: 48px; */
+   /* left: 160px; */
+   background-color: var(--bgrColorNote);
+   z-index: 100;
+   font-family: var(--mainFont);
+   border: 2px solid var(--borderColorGr);
+   width: 180px;
+   text-align: center;
+   padding: 20px;
+   animation: anim 0.9s linear forwards;
+}
+
+@keyframes anim {
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+      display: none;
+   }
+}
