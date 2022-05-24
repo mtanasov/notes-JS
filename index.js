@@ -11,9 +11,9 @@ app.on("ready", () => {
 
 
    const win = new BrowserWindow({
-      x: 815,
+      x: 50,
       y: 50,
-      height: 930,
+      height: 800,
       width: 1100,
       frame: false,
       transparent: false,
